@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ukFlag from './united-kingdom-flag-3d-icon-32.png'
-import plFlag from './poland-flag-3d-icon-32.png'
+import ukFlag from './UK-flag.png'
+import plFlag from './poland-flag.png'
 
 const FlagImage = styled.img`
   padding-right: 0.5rem;
