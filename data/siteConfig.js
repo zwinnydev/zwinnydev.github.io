@@ -17,7 +17,7 @@ module.exports = {
   siteCover: 'banner.png', // file in content/images
   siteCoverLeft: 'zwinnyDevLogoBig-white.png',
   siteCoverRight: 'thinker-white.png',
-  googleAnalyticsId: 'UA-167603283-2',
+  googleAnalyticsId: 'UA-167603283-3',
   background_color: '#0d0d0d',
   theme_color: '#0097A7',
   display: 'standalone',
