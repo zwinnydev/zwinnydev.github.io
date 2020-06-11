@@ -29,5 +29,7 @@ export default {
     backgroundArticle: "#1f1f1f",
     textLight: white,
     text: white,
+    highlight_code_oneline: "#2d2d2d",
+    highlight_code_oneline_color: teal,
   }
 }

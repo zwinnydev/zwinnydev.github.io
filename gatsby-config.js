@@ -53,6 +53,7 @@ module.exports = {
               withWebp: true,
             },
           },
+          { resolve: 'gatsby-remark-plantuml' },
           { resolve: 'gatsby-remark-prismjs' },
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
@@ -65,7 +66,10 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-images`],
+        plugins: [
+          {resolve: `gatsby-remark-images`},
+          {resolve: 'gatsby-remark-plantuml'}
+        ],
       },
     },
     `gatsby-transformer-sharp`,

@@ -13,7 +13,7 @@ module.exports = {
   siteUrl: 'https://zwinny.dev',
   disqusSiteUrl: 'https://zwinny.dev',
   // Prefixes all links. For cases when deployed to maciejtrojniarz.github.io/
-  pathPrefix: '', // Note: it must *not* have a trailing slash.
+  pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: 'banner.png', // file in content/images
   siteCoverLeft: 'zwinnyDevLogoBig-white.png',
   siteCoverRight: 'thinker-white.png',

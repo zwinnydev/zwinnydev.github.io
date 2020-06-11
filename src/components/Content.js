@@ -42,7 +42,8 @@ const ContentBody = styled.div`
   h5 .anchor svg,
   h6 .anchor svg {
     visibility: hidden;
-    margin-left: -16px;
+    margin-left: -32px;
+    margin-bottom: -1em;
   }
 
   h1:hover .anchor svg,
@@ -128,7 +129,7 @@ const ContentBody = styled.div`
   & em > code.language-text,
   & strong > code.language-text {
     background: ${colors.highlight_code_oneline};
-    color: #222222cc;
+    color: ${colors.highlight_code_oneline_color};
     padding: 0 3px;
     font-size: 0.94em;
     border-radius: 0.3rem;

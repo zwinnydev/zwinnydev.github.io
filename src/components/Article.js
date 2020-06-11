@@ -9,6 +9,11 @@ const ArticleWrapper = styled.article`
   @media only screen and (max-width: 500px) {
     padding: 0;
   }
+
+  svg {
+    display: block;
+    margin: 1.5em auto;
+  }
 `
 
 const ArticleFooter = styled.footer`

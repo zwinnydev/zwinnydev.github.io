@@ -87,13 +87,14 @@ const PrevNextPost = props => {
             slug,
             language,
           } = article.node.frontmatter
-          const heroImg = (cover && cover.publicURL) || fluid.src
-
+          const coverStyles = cover
+          ? ({ backgroundImage: `url("${cover.publicURL}")`}) :
+          ({ backgroundImage: `url("${fluid.src}")`, backgroundPosition: "left" })
           return (
             <Preview key={`prev-next-${i}`}>
               <Link to={`/${slug}`} aria-label={`View ${title} article`}>
                 <PreviewCover
-                  style={{ backgroundImage: `url("${heroImg}")` }}
+                  style={coverStyles}
                 />
                 <PreviewContent>
                   <header>
