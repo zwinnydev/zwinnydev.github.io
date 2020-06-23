@@ -7,11 +7,6 @@ import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faFeatherAlt, faAddressCard  } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faTwitter, faLinkedin, faFeatherAlt, faAddressCard, faGithub, faYoutube)
 
 export default props => {
   const page = props.data.page

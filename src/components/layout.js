@@ -6,6 +6,11 @@ import Footer from './Footer'
 import 'prismjs/themes/prism-tomorrow.css'
 import { GlobalStyle } from './Commons'
 import { media } from '../tokens'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFeatherAlt, faAddressCard  } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTwitter, faLinkedin, faFeatherAlt, faAddressCard, faGithub, faYoutube)
 
 const SiteContent = styled.div`
   margin: 0 0;
