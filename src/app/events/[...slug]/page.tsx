@@ -1,18 +1,17 @@
 import React from "react";
+import { ChevronLeft, LinkIcon } from "lucide-react";
 import { Metadata } from "next";
-import { events } from "#site/content";
-import { cn, formatDate } from "@/lib/utils";
-import "@/styles/mdx.css";
-
-import { Mdx } from "@/components/content/mdx-component";
-import { Calendar, ChevronLeft, Clock, LinkIcon, MapPin } from "lucide-react";
 import Link from "next/link";
+import "@/styles/mdx.css";
+import { events } from "#site/content";
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import gugiFont from "@/components/ui/gugi-font";
-import ContentImage from "@/components/content/content-image";
 import FormattedDate from "@/components/ui/formatted-date";
+import gugiFont from "@/components/ui/gugi-font";
 import Time from "@/components/ui/time";
 import Place from "@/components/ui/place";
+import { Mdx } from "@/components/content/mdx-component";
+import ContentImage from "@/components/content/content-image";
 
 interface EventPageItemProps {
   params: {

@@ -1,4 +1,4 @@
-import { Blog, Talk, Event, Workshop } from "#site/content";
+import { Blog, Talk, Event } from "#site/content";
 
 export type Content = Blog | Talk | Event
 

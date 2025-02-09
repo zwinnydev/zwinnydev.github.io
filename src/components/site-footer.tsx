@@ -3,10 +3,6 @@ import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import gugiFont from "./ui/gugi-font";
-import { SOCIALS } from "@/constants";
-import { buttonVariants } from "@/components/ui/button";
-import Inline from './ui/inline';
-import { Mail } from 'lucide-react';
 import Socials from './socials';
 
 export default function SiteFooter() {
