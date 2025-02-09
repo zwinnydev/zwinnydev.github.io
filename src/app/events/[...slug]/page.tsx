@@ -1,0 +1,99 @@
+import React from "react";
+import { Metadata } from "next";
+import { events } from "#site/content";
+import { cn, formatDate } from "@/lib/utils";
+import "@/styles/mdx.css";
+
+import { Mdx } from "@/components/content/mdx-component";
+import { Calendar, ChevronLeft, Clock, LinkIcon, MapPin } from "lucide-react";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import gugiFont from "@/components/ui/gugi-font";
+import ContentImage from "@/components/content/content-image";
+import FormattedDate from "@/components/ui/formatted-date";
+import Time from "@/components/ui/time";
+import Place from "@/components/ui/place";
+
+interface EventPageItemProps {
+  params: {
+    slug: string[];
+  };
+}
+
+async function getEventFromParams(params: EventPageItemProps["params"]) {
+  const slug = params?.slug.join("/");
+  const event = events.find((event) => event.slugAsParams === slug);
+
+  if (!event) {
+    return null;
+  }
+
+  return event;
+}
+
+export async function generateMetadata({
+  params,
+}: EventPageItemProps): Promise<Metadata> {
+  const event = await getEventFromParams(params);
+
+  if (!event) {
+    return {};
+  }
+
+  return {
+    title: event.title,
+    description: event.description
+  };
+}
+
+export async function generateStaticParams(): Promise<
+  EventPageItemProps["params"][]
+> {
+  return events.map((event) => ({
+    slug: event.slugAsParams.split("/"),
+  }));
+}
+
+export default async function eventPageItem({ params }: EventPageItemProps) {
+  const event = await getEventFromParams(params);
+
+  if (!event) {
+    return {};
+  }
+
+  return (
+    <article className="container relative max-w-3xl py-6 lg:py-10">
+      <div>
+        <h1 className={cn("mt-2 inline-block text-4xl font-bold capitalize leading-tight text-primary lg:text-5xl", gugiFont.className)}>
+          {event.title}
+        </h1>
+        <div className="text-sm items-center text-muted-foreground my-8" style={{display: 'flex', gap: '8px', width: "100%"}}>
+          <Place address={event.where} /> 
+          <span>|</span>
+          <FormattedDate date={event.date}/>
+          <span>|</span>
+          <Time time={event.time}/>
+          { event.link &&(
+            <>
+              <span>|</span>
+              <Link href={event.link} style={{display: 'flex', gap: '8px'}}><LinkIcon/>more</Link>
+            </>)}
+        </div>
+        <ContentImage content={event} />
+        
+        {event.body && <Mdx code={event.body} />}
+
+        <hr className="mt-12" />
+        <div className="flex justify-center py-6 lg:py-10">
+          <Link
+            href="/events"
+            className={cn(buttonVariants({ variant: "ghost" }))}
+          >
+            <ChevronLeft className="mr-2 size-4" />
+            See all events
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
