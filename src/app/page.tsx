@@ -1,13 +1,12 @@
-import { blogs, talks, events } from "#site/content";
-import { cn } from "@/lib/utils";
-import ContentCategoryLink from "@/components/content/content-category-link";
-import gugiFont from "@/components/ui/gugi-font";
-import { FeatherIcon, FileVolumeIcon, Calendar } from "lucide-react";
-import SeeYouThere from "@/components/content/event/see-you-there";
 import Image from "next/image";
+import { FeatherIcon, FileVolumeIcon } from "lucide-react";
+import { blogs, talks} from "#site/content";
 import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import { cn } from "@/lib/utils";
+import gugiFont from "@/components/ui/gugi-font";
 import HighlightedLink from "@/components/ui/highlighted-link";
+import ContentCategoryLink from "@/components/content/content-category-link";
+import SeeYouThere from "@/components/content/event/see-you-there";
 
 
 export default function Home() {

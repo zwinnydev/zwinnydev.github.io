@@ -2,14 +2,6 @@ import React from "react";
 import { Metadata } from "next";
 import PageHeader from "@/components/page-header";
 import { futureEvents, pastEvents } from "@/content";
-import Image from "next/image";
-import { Event } from "#site/content";
-import gugiFont from "@/components/ui/gugi-font";
-import Link from "next/link";
-import { cn, formatDate } from "@/lib/utils";
-import Place from "@/components/ui/place";
-import FormattedDate from "@/components/ui/formatted-date";
-import Time from "@/components/ui/time";
 import EventCard from "@/components/content/event/event-card";
 
 export const metadata: Metadata = {

@@ -5,7 +5,7 @@ import gugiFont from '@/components/ui/gugi-font';
 import { cn } from '@/lib/utils';
 
 const SeeYouThere = () => nearestEvents.length > 0 && (
-    <div className="container items-left mt-8">
+    <div className="container mt-8">
         <h2 className={cn("text-2xl font-extrabold text-primary", gugiFont.className)}>
             Where you can meet me next:
         </h2>

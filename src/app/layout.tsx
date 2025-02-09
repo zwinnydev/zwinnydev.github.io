@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fira_Code, Gugi, Lexend } from "next/font/google";
+import { Fira_Code as firaCode, Lexend } from "next/font/google";
 import "@/styles/globals.css";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const fontCode = Fira_Code({
+const fontCode = firaCode({
   variable: "--font-code",
   subsets: ["latin-ext"]
 });
