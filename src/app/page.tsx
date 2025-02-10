@@ -7,17 +7,24 @@ import gugiFont from "@/components/ui/gugi-font";
 import HighlightedLink from "@/components/ui/highlighted-link";
 import ContentCategoryLink from "@/components/content/content-category-link";
 import SeeYouThere from "@/components/content/event/see-you-there";
+import Script from "next/script";
 
 
 export default function Home() {
   return (
     <section className="space-y-6 pb-8 md:pb-12 lg:py-32">
+
+             <Script
+                src="lib/remove-workers.js"
+                strategy="lazyOnload"
+              />
       <div className="container flex max-w-5xl flex-col gap-4 xl:mt-0">
         <div className="grid sm:grid-cols-2">
           <div>
             <Image
               src={siteConfig.authorImage}
               alt={siteConfig.name}
+              priority={false}
             />
           </div>
           <div className="flex-col">
