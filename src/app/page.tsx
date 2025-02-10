@@ -9,7 +9,6 @@ import ContentCategoryLink from "@/components/content/content-category-link";
 import SeeYouThere from "@/components/content/event/see-you-there";
 import Script from "next/script";
 
-
 export default function Home() {
   return (
     <section className="space-y-6 pb-8 md:pb-12 lg:py-32">
