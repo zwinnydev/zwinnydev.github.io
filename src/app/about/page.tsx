@@ -9,7 +9,8 @@ import HighlightedLink from "@/components/ui/highlighted-link";
 import Socials from "@/components/socials";
 
 export const metadata: Metadata = {
-  title: "About Maciej Trojniarz",
+  title: "zwinny.dev | Maciej Trojniarz | about",
+  keywords: ["zwinny.dev", "Maciej Trojniarz", "software craftsman"]
 };
 
 export default function AboutPage() {

@@ -29,7 +29,7 @@ const EventCard = ({event}: {event: Event}) =>
       <p className="text-muted-foreground">{event.description}</p>
     )}
     <div className="text-sm text-muted-foreground" style={{display: 'flex', gap: '8px'}}>
-        <Place address={event.where}/>
+        <Place address={event.where} mapPin={event.mapPin}/>
     </div>
     <div className="text-muted-foreground" style={{display: 'flex', gap: '8px'}}>
         <FormattedDate date={event.date}/><Time time={event.time}/>

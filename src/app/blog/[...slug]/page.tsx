@@ -10,6 +10,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import gugiFont from "@/components/ui/gugi-font";
 import ContentImage from "@/components/content/content-image";
+import { socialMediaMetadata } from "@/lib/social-media";
 
 interface BlogPageItemProps {
   params: {
@@ -43,6 +44,8 @@ export async function generateMetadata({
     authors: {
       name: blog.author,
     },
+    keywords: blog.tags,
+    ...socialMediaMetadata(blog)
   };
 }
 
