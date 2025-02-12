@@ -26,7 +26,7 @@ const blogs = defineCollection({
     .object({
       ...contentFields('/images/blog/default.png'),
       date: s.isodate(),
-      author: s.string().default('zwinny.dev')
+      author: s.string().default('Maciej Trojniarz')
     })
     .transform(computedFields),
 });
@@ -39,7 +39,7 @@ const talks = defineCollection({
       ...contentFields(''),
       date: s.isodate(),
       videoLink: s.string().default(''),
-      author: s.string().default('zwinny.dev')
+      author: s.string().default('Maciej Trojniarz')
     })
     .transform(computedFields),
 });
@@ -52,6 +52,7 @@ const events = defineCollection({
       ...contentFields(''),
       date: s.isodate(),
       where: s.string(),
+      mapPin: s.string(),
       time: s.string(),
       speaking: s.boolean().default(false),
       hosting: s.boolean().default(false),

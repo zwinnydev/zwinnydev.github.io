@@ -12,6 +12,7 @@ import Time from "@/components/ui/time";
 import Place from "@/components/ui/place";
 import { Mdx } from "@/components/content/mdx-component";
 import ContentImage from "@/components/content/content-image";
+import { socialMediaMetadata } from "@/lib/social-media";
 
 interface EventPageItemProps {
   params: {
@@ -41,7 +42,9 @@ export async function generateMetadata({
 
   return {
     title: event.title,
-    description: event.description
+    description: event.description,
+    keywords: event.tags,
+    ...socialMediaMetadata(event)
   };
 }
 
@@ -67,7 +70,7 @@ export default async function eventPageItem({ params }: EventPageItemProps) {
           {event.title}
         </h1>
         <div className="text-sm items-center text-muted-foreground my-8" style={{display: 'flex', gap: '8px', width: "100%"}}>
-          <Place address={event.where} /> 
+          <Place address={event.where} mapPin={event.mapPin}/> 
           <span>|</span>
           <FormattedDate date={event.date}/>
           <span>|</span>

@@ -10,6 +10,7 @@ import { buttonVariants } from "@/components/ui/button";
 import gugiFont from "@/components/ui/gugi-font";
 import TalkVideo from "@/components/content/talk/talk-video";
 import ContentImage from "@/components/content/content-image";
+import { socialMediaMetadata } from "@/lib/social-media";
 
 interface TalkPageItemProps {
   params: {
@@ -43,6 +44,7 @@ export async function generateMetadata({
     authors: {
       name: talk.author,
     },
+    ...socialMediaMetadata(talk)
   };
 }
 
